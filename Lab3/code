@@ -1,0 +1,28 @@
+//exporting file program
+setwd("C:/lab2")
+getwd()
+grep(".csv",list.files(),value=T)
+data<-read.delim("Churn_Modelling.csv",sep=',')
+data
+summary(data)
+getwd()
+new_data<-read.delim("churn.csv",sep=',')
+new_data
+dt<-cbind(data,new_data$Active)
+head(dt)
+colnames(dt)
+write.csv(dt,'demolab3.csv',row.names = FALSE)
+
+
+//bee and flower frame program
+Buff_tail<-c(10,1,37,5,12)
+Garden_bee<-c(8,3,9,6,4)
+Red_tail<-c(1,8,9,12,4)
+Carder_bee<-c(8,27,6,32,23)
+Honey_bee<-c(12,13,16,9,10)
+dt<-data.frame(Buff_tail,Garden_bee,Red_tail,Carder_bee,Honey_bee)
+dt
+plant_names<-c("Thistle","vipers","Golden_Rain","Yellowalfala","blackberry")
+plant_names
+rownames(dt)<-plant_names
+dt
