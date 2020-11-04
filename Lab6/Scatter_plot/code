@@ -1,0 +1,6 @@
+install.packages("ggplot2")
+library(ggplot2)
+head(mtcars)
+mtcars <- mtcars[order(mtcars$mpg),]
+head(mtcars)
+dotchart(mtcars$mpg, labels = row.names(mtcars), cex = 0.9, xlab = "mpg",main="Miles per Gallon of Car")
